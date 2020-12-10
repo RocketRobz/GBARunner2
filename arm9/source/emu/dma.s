@@ -122,10 +122,6 @@ write_dma_control_\offs:
 		//invalidate icache
 		movne r13, #0
 		mcrne p15, 0, r13, c7, c5, 0
-#ifdef ENABLE_HICODE
-		//unmap code
-		mcrne p15, 0, r13, c6, c3, 0
-#endif
 #endif
 
 	//dst vram
